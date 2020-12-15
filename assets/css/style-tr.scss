@@ -100,14 +100,6 @@ a {
 					transform: scale(1.1);
 					transition: ease-in-out .5s;
 				}
-				.content {
-					h2 {
-						a {
-							color: #0062BD;
-							transition: ease-in-out .5s;
-						}
-					}
-				}
 			}
 		}
 	}
@@ -212,6 +204,15 @@ a {
 				content: url(./../img/btnseemore.png);
 				right: 10px;
 			}
+			&:hover {
+				color: #0062bd;
+				transition: 0.5s;
+				&:after {
+					position: absolute;
+					content: url(./../img/hover.png);
+					right: 10px;
+				}
+			}
 		}
 	}
 }
@@ -299,6 +300,7 @@ a {
 			width: 55%;
 			float: left;
 			border-bottom: none;
+			padding-bottom: 0;
 			>a {
 				display: block;
 				width: 100%;
@@ -311,6 +313,7 @@ a {
 				}
 			}
 			.content {
+				width: 100%;
 				h2 {
 					margin: 10px 0;
 					line-height: 18px;
@@ -328,6 +331,7 @@ a {
 					}
 				}
 				p {
+					margin-bottom: 0;
 					a {
 						font-family: Montserrat;
 						font-style: normal;
@@ -356,7 +360,7 @@ a {
 	width: 100%;
 	display: inline-block;
 	overflow-y: scroll;
-	height: 400px;
+	height: 380px;
 	.news_item {
 		width: 100%;
 		display: flex;
@@ -506,6 +510,7 @@ a {
 .slider_video_hotro {
 	margin: 0 -15px;
 	margin-top: 20px;
+	margin-bottom: 8px;
 	.slick-prev {
 		z-index: 1;
 		left: 15px;
@@ -798,10 +803,10 @@ a {
 				    	padding: 10px 15px;
 				    }
 				    &:nth-child(2) {
-				    	width: 30%;
+				    	width: 17%;
 				    }
 				    &:nth-child(3) {
-				    	width: 50%;
+				    	width: 60%;
 				    }
 				}
 			}
@@ -1176,9 +1181,9 @@ a {
 				}
 				&:nth-child(2) {
 					margin-right: auto;
-					&:before {
+					/*&:before {
 						display: none;
-					}
+					}*/
 				}
 			}
 			.cicrle {
@@ -1189,6 +1194,7 @@ a {
 			    transition: height 0.25s ease, width 0.25s ease;
 			    z-index: 6;
 			    position: relative;
+			    margin-right: auto;
 			    &:before {
 				    content: "";
 				    display: block;
@@ -1238,6 +1244,9 @@ a {
 					}
 				}
 			}
+			.post_marquee {
+				width: calc(100% - 27px);
+			}
 		}
 	}
 }
@@ -1270,7 +1279,7 @@ a {
     	li {
     		padding: 5px 0;
     		width: 100%;
-    		border-bottom: 1px solid #ffffff69;
+    		border-bottom: 1px solid #ffffff2b;
     		&:last-child {
     			border-bottom: none;
     		}
@@ -1311,21 +1320,21 @@ a {
     }
 }
 .img_fixed_homepage_1 {
-	position: fixed;
+	position: absolute;
 	left: 85px;
 	width: 220px;
 	overflow: hidden;
-	top: 240px;
+	top: 250px;
 	img {
 		width: 100%;
 	}
 }
 .img_fixed_homepage_2 {
-	position: fixed;
+	position: absolute;
 	right: 85px;
 	width: 220px;
 	overflow: hidden;
-	top: 240px;
+	top: 250px;
 	img {
 		width: 100%;
 	}
@@ -1389,6 +1398,7 @@ a {
 		left: 0;
 	}
 	h2 {
+		margin: 0;
 		width: 100%;
 		position: absolute;
 		top: 50%;
@@ -1673,6 +1683,9 @@ a {
 	padding: 18px;
 	width: 100%;
 	overflow: hidden;
+	.sidebar_box {
+		background: #fff;
+	}
 }
 .element_content_box_color {
 	background: #fff;
@@ -1837,9 +1850,9 @@ table.download {
 }
 .section_page_7 {
 	padding-top: 25px;
-	.element_breadcrumb {
-		padding: 0 15px;
-	}
+}
+.section_page_gt {
+	padding-top: 25px;
 }
 .title_post {
 	font-family: Montserrat;
@@ -2011,6 +2024,7 @@ table.download {
 		.list_mimi {
 			display: none;
 			margin-top: 5px;
+			padding-left: 15px;
 			li {
 				list-style: none;
 				padding-left: 20px;
@@ -2022,12 +2036,16 @@ table.download {
 					top: 1px;
 				}
 				a {
-				font-family: Montserrat;
-				font-style: normal;
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 24px;
-				color: #383838;
+					font-family: Montserrat;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 24px;
+					color: #383838;
+				}
+				.active {
+					color: #0062BD;
+					font-weight: bold;
 				}
 			}
 		}
@@ -2070,7 +2088,7 @@ table.download {
 		&:after {
 			position: absolute;
 			content: '';
-			width: 2px;
+			width: 4px;
 			height: 44px;
 			background: #DA251D;
 			left: 0;
@@ -2295,6 +2313,7 @@ table.download {
 }
 .title_file {
 	text-align: center;
+	margin: 25px 0 20px 0;
 	h2{
 		font-family: Montserrat;
 		font-style: normal;
@@ -2503,6 +2522,7 @@ table.download {
 			font-size: 16px;
 			line-height: 148.4%;
 			color: #383838;
+			width: 100%;
 	 	}
 	 	.active {
 	 		font-family: Montserrat;
@@ -2697,6 +2717,14 @@ table.download {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    .slick-prev:before, .slick-next:before {
+    	font-size: 40px;
+    	z-index: 1;
+    }
+    .slick-prev {
+    	z-index: 1;
+    	left: -45px;
+    }
     .close_preview_img{
     	position: absolute;
 	    top: 10%;
@@ -2731,5 +2759,122 @@ table.download {
 	.element_content_box_color {
 		padding: 0;
 		margin: 0 -15px;
+	}
+}
+.header_page.fixed_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+.slider_image_1 {
+	width: 100%;
+	.item {
+		.img {
+			height: 170px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.content {
+			h4 {
+				a {
+					font-family: Montserrat;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 139.99%;
+					color: #4C4C4C;
+				}
+			}
+			p {
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 17px;
+				color: #383838;
+			}
+		}
+	}
+}
+.slider_image_2 {
+	width: 100%;
+	.item {
+		.img {
+			height: 170px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.content {
+			h4 {
+				a {
+					font-family: Montserrat;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 139.99%;
+					color: #4C4C4C;
+				}
+			}
+			p {
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 17px;
+				color: #383838;
+			}
+		}
+	}
+}
+.slider_image_2 , .slider_image_1 {
+	.slick-prev, .slick-next {
+		top: 25%;
+	}
+	.slick-prev {
+		left: 0;
+		z-index: 1;
+		&:before {
+			display: none;
+		}
+	}
+	.slick-next {
+	    right: 4px;
+	    &:before {
+			display: none;
+		}
+	}
+	.slick-slide {
+		margin: 0 10px;
+	}
+	.slick-list {
+		margin: 0 -10px;
+	}
+	.item {
+		&:hover {
+			.img {
+				img {
+					transform: scale(1.2);
+					transition: 0.5s;
+				}
+			}
+			.content {
+				h4 {
+					a {
+						color: #0062bd;
+						transition: 0.5s;
+					}
+				}
+			}
+		}
 	}
 }

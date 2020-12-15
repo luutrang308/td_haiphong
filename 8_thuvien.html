@@ -168,8 +168,14 @@
                     <div class="cicrle">
                         <span></span>
                     </div>
-                    <a href="" title="">Bế mạc Trại huấn luyện Nguyễn Chí Thanh khu vực phía Bắc</a>
-                    <a href="" title="">Hơn 800 em thiếu nhi tham gia Ngày hội “Chiến sĩ nhỏ Điện Biên - Làm theo lời Bác dạy"</a>
+                    <div class="post_marquee">
+                        <marquee>
+                            <a href="" title="">Bế mạc Trại huấn luyện Nguyễn Chí Thanh khu vực phía Bắc</a>
+                            <a href="" title="">Hơn 800 em thiếu nhi tham gia Ngày hội “Chiến sĩ nhỏ Điện Biên - Làm theo lời Bác dạy"</a>
+                            <a href="" title="">Ngày hội “Chiến sĩ nhỏ Điện Biên - Làm theo lời Bác dạy"</a>
+                        </marquee>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -672,56 +678,7 @@
 <script src="./assets/fancybox/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/js/wow.min.js"></script>
 <script type="text/javascript" src="./assets/js/custrom-tr.js"></script>
-<script>
-    var TabPictureView = {
-    classPreview    : ".preview_img",
-    elmGirdImg      : ".list_grid_img",
-    elmGirdItem     : ".gird_img_item",
-    elmSlidePreview : ".slider_preview_img",
-    elmClosePreview : ".close_preview_img",
-    slickActive     : null,
 
-    unSlick: function(elm = null) {
-        if (elm == null) {
-            elm = this.slickActive;
-        }
-        elm.slick('unslick');
-    },
-
-    setSlick: function(elmSetSlick) {
-        this.slickActive = $(elmSetSlick).slick({
-            dots: true,
-            slidesToShow: 1,
-        });
-    },
-
-    openPreview: function(elmClick) {
-        var elementPreview = $(elmClick).find(this.classPreview);
-        var sliderPreview = elementPreview.find(this.elmSlidePreview);
-        elementPreview.show();
-        this.setSlick(sliderPreview);
-    },
-
-    closePreview : function(elmClick){
-        this.unSlick();
-        $(elmClick).closest(this.classPreview).hide();
-    },
-
-    setClickLibraryPicture : function(){
-        $(this.elmGirdImg).on('click', this.elmGirdItem, function(e) {
-            if($(e.target).hasClass(TabPictureView.classPreview) || $(e.target).closest(TabPictureView.classPreview).length > 0){
-                return true;
-            }
-            TabPictureView.openPreview(this);
-        });
-        $(this.elmGirdImg).on('click', this.elmClosePreview, function() {
-            TabPictureView.closePreview(this);
-        });
-    }
-}
-
-TabPictureView.setClickLibraryPicture();
-</script>
 </body>
 </html>
 

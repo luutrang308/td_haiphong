@@ -40,9 +40,7 @@
   font-family: MTD-Simpletune;
   src: url(./../fonts/MTD-Simpletune.otf);
 }
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  
-}
+
 @media screen and (max-width: 1366px) {
   .img_fixed_homepage_1 , .img_fixed_homepage_2 {
     display: none;
@@ -52,6 +50,8 @@
   }
 }
 
+
+/* 1024 */
 @media screen and (max-width: 1365px) and (min-width: 992px) {
   .contact_form h2 {
     font-size: 24px;
@@ -77,7 +77,17 @@
   .list_grid_img .gird_img_item .img {
     height: 135px;
   }
+  .section_footer_pc .row .footer:nth-child(2) {
+    width: 44%;
+  }
+  .section_footer_pc .row .footer:nth-child(4) {
+    width: 26%;
+  }
+  .element_content_tab table tr td , .element_content_box p{
+    font-size: 14px;
+  }
 }
+
 @media screen and (min-width: 992px) {
   .icon_bar {
     display: none;
@@ -87,6 +97,8 @@
   }
   
 }
+
+/* 768 */
 @media screen and (max-width: 992px) and (min-width: 576px){
   .section-video-pp .item .img {
     height: 100px;
@@ -112,8 +124,12 @@
   .section_thuvien .element_content_box_color {
     margin: 0;
   }
+  .element_content_tab table tr td , .element_content_box p{
+    font-size: 14px;
+  }
 
 }
+
 @media screen and (max-width: 992px) {
   .contact_form h2 {
     font-size: 18px;
@@ -236,7 +252,7 @@
   .header_pc .header_page:nth-child(4) a {
     margin-left: 0;
     width: 80%;
-    display: -webkit-box;
+    display: inherit;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -331,6 +347,9 @@
   .header_pc .header_page:nth-child(3).active {
     display: block !important;
   }
+  .header_pc .header_page:nth-child(3).active.fixed_header {
+    margin-top: 90px;
+  }
   .header_pc .header_page:nth-child(2) .element_bar_menu {
     display: flex;
     flex-flow: row wrap;
@@ -365,6 +384,8 @@
     width: 54%;
   }
 }
+
+/* 375 */
 @media screen and (max-width: 576px) {
   .element_hot_news .item:last-child .box_item:nth-child(2), .element_hot_news .item:last-child .box_item:nth-child(3) {
     margin-top: 6px;
@@ -477,5 +498,16 @@
   }
   .section_banner .img {
     height: 150px;
+  }
+  .header_pc .header_page:nth-child(4) .post_marquee {
+    width: calc(100% - 45px);
+  }
+  .header_page.fixed_header_mobi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
   }
 }
